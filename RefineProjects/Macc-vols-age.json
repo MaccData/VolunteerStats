@@ -1,0 +1,583 @@
+[
+  {
+    "op": "rdf-extension/save-rdf-schema",
+    "description": "Save RDF schema skeleton",
+    "schema": {
+      "baseUri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/",
+      "prefixes": [
+        {
+          "name": "sdmx-measure",
+          "uri": "http://purl.org/linked-data/sdmx/2009/measure#"
+        },
+        {
+          "name": "prov",
+          "uri": "http://www.w3.org/ns/prov#"
+        },
+        {
+          "name": "interval",
+          "uri": "http://reference.data.gov.uk/def/intervals/"
+        },
+        {
+          "name": "prop",
+          "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/"
+        },
+        {
+          "name": "sdmx-attribute",
+          "uri": "http://purl.org/linked-data/sdmx/2009/attribute#"
+        },
+        {
+          "name": "void",
+          "uri": "http://rdfs.org/ns/void#"
+        },
+        {
+          "name": "sdmx-concept",
+          "uri": "http://purl.org/linked-data/sdmx/2009/concept#"
+        },
+        {
+          "name": "org",
+          "uri": "http://www.w3.org/ns/org#"
+        },
+        {
+          "name": "qb",
+          "uri": "http://purl.org/linked-data/cube#"
+        },
+        {
+          "name": "sdmx-code",
+          "uri": "http://purl.org/linked-data/sdmx/2009/code#"
+        },
+        {
+          "name": "dcterms",
+          "uri": "http://purl.org/dc/terms/"
+        },
+        {
+          "name": "dccs",
+          "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dccs/"
+        },
+        {
+          "name": "rdfs",
+          "uri": "http://www.w3.org/2000/01/rdf-schema#"
+        },
+        {
+          "name": "owl",
+          "uri": "http://www.w3.org/2002/07/owl#"
+        },
+        {
+          "name": "xsd",
+          "uri": "http://www.w3.org/2001/XMLSchema#"
+        },
+        {
+          "name": "sdmx-metadata",
+          "uri": "http://purl.org/linked-data/sdmx/2009/metadata#"
+        },
+        {
+          "name": "rdf",
+          "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        },
+        {
+          "name": "scovo",
+          "uri": "http://purl.org/NET/scovo#"
+        },
+        {
+          "name": "admingeo",
+          "uri": "http://data.ordnancesurvey.co.uk/ontology/admingeo/"
+        },
+        {
+          "name": "skos",
+          "uri": "http://www.w3.org/2004/02/skos/core#"
+        },
+        {
+          "name": "ds",
+          "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dataset/"
+        },
+        {
+          "name": "sdmx-dimension",
+          "uri": "http://purl.org/linked-data/sdmx/2009/dimension#"
+        },
+        {
+          "name": "sdmx-subject",
+          "uri": "http://purl.org/linked-data/sdmx/2009/subject#"
+        }
+      ],
+      "rootNodes": [
+        {
+          "nodeType": "resource",
+          "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age",
+          "rdfTypes": [
+            {
+              "uri": "http://purl.org/linked-data/cube#DataSet",
+              "curie": "qb:DataSet"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://purl.org/linked-data/cube#structure",
+              "curie": "qb:structure",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dsd",
+                "rdfTypes": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#DataStructureDefinition",
+                    "curie": "qb:DataStructureDefinition"
+                  }
+                ],
+                "links": [
+                  {
+                    "uri": "http://purl.org/linked-data/cube#component",
+                    "curie": "qb:component",
+                    "target": {
+                      "nodeType": "resource",
+                      "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dccs/age",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#ComponentSpecification",
+                          "curie": "qb:ComponentSpecification"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#dimension",
+                          "curie": "qb:dimension",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/age",
+                            "rdfTypes": [
+                              {
+                                "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                                "curie": "qb:DimensionProperty"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "curie": "rdfs:label",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "Age Range",
+                                  "lang": "en"
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                "curie": "rdfs:subPropertyOf",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://purl.org/linked-data/sdmx/2009/dimension#age",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://purl.org/linked-data/cube#concept",
+                                "curie": "qb:concept",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://purl.org/linked-data/sdmx/2009/concept#age",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://purl.org/linked-data/cube#order",
+                                "curie": "qb:order",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "1",
+                                  "valueType": "http://www.w3.org/2001/XMLSchema#int"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Component Specification for Age",
+                            "lang": "en"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://purl.org/linked-data/cube#component",
+                    "curie": "qb:component",
+                    "target": {
+                      "nodeType": "resource",
+                      "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dccs/period",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#ComponentSpecification",
+                          "curie": "qb:ComponentSpecification"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#dimension",
+                          "curie": "qb:dimension",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/period",
+                            "rdfTypes": [
+                              {
+                                "uri": "http://purl.org/linked-data/cube#DimensionProperty",
+                                "curie": "qb:DimensionProperty"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "curie": "rdfs:label",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "Period",
+                                  "lang": "en"
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#range",
+                                "curie": "rdfs:range",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://reference.data.gov.uk/def/intervals/Interval",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                "curie": "rdfs:subPropertyOf",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://purl.org/linked-data/sdmx/2009/dimension#refPeriod",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://purl.org/linked-data/cube#concept",
+                                "curie": "qb:concept",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://purl.org/linked-data/sdmx/2009/concept#refPeriod",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://purl.org/linked-data/cube#order",
+                                "curie": "qb:order",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "3",
+                                  "valueType": "http://www.w3.org/2001/XMLSchema#int"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Component Specification for Period",
+                            "lang": "en"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://purl.org/linked-data/cube#component",
+                    "curie": "qb:component",
+                    "target": {
+                      "nodeType": "resource",
+                      "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/dccs/count",
+                      "rdfTypes": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#ComponentSpecification",
+                          "curie": "qb:ComponentSpecification"
+                        }
+                      ],
+                      "links": [
+                        {
+                          "uri": "http://purl.org/linked-data/cube#measure",
+                          "curie": "qb:measure",
+                          "target": {
+                            "nodeType": "resource",
+                            "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/count",
+                            "rdfTypes": [
+                              {
+                                "uri": "http://purl.org/linked-data/cube#MeasureProperty",
+                                "curie": "qb:MeasureProperty"
+                              }
+                            ],
+                            "links": [
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                                "curie": "rdfs:label",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "Count",
+                                  "lang": "en"
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#range",
+                                "curie": "rdfs:range",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://www.w3.org/2001/XMLSchema#decimal",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+                                "curie": "rdfs:subPropertyOf",
+                                "target": {
+                                  "nodeType": "resource",
+                                  "value": "http://purl.org/linked-data/sdmx/2009/measure#obsValue",
+                                  "rdfTypes": [],
+                                  "links": []
+                                }
+                              },
+                              {
+                                "uri": "http://purl.org/linked-data/cube#order",
+                                "curie": "qb:order",
+                                "target": {
+                                  "nodeType": "literal",
+                                  "value": "4",
+                                  "valueType": "http://www.w3.org/2001/XMLSchema#int"
+                                }
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                          "curie": "rdfs:label",
+                          "target": {
+                            "nodeType": "literal",
+                            "value": "Component Specification for Count"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "Data Structure Definition for Volunteer Dataset",
+                      "lang": "en"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "literal",
+                "value": "Volunteer stats, by age group",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/title",
+              "curie": "dcterms:title",
+              "target": {
+                "nodeType": "literal",
+                "value": "Volunteer stats, by age group",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/description",
+              "curie": "dcterms:description",
+              "target": {
+                "nodeType": "literal",
+                "value": "Count of volunteers registered with the Manchester Volunteer Centre, by age.",
+                "lang": "en"
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/sdmx/2009/attribute#unitMeasure",
+              "curie": "sdmx-attribute:unitMeasure",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://reference.data.gov.uk/doc/government-quarter",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/subject",
+              "curie": "dcterms:subject",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://id.esd.org.uk/subject/763",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "Volunteering",
+                      "lang": "en"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/subject",
+              "curie": "dcterms:subject",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://purl.org/linked-data/sdmx/2009/subject#1.10",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "Political and other community activities",
+                      "lang": "en"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://purl.org/dc/terms/source",
+              "curie": "dcterms:source",
+              "target": {
+                "nodeType": "resource",
+                "value": "https://www.manchestercommunitycentral.org/policy-and-influence/open-data",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "literal",
+                      "value": "Macc open data",
+                      "lang": "en"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "cell-as-resource",
+          "expression": "'http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/obs-' +cells[\"ID\"].value.urlify()",
+          "isRowNumberCell": false,
+          "columnName": "ID",
+          "rdfTypes": [
+            {
+              "uri": "http://purl.org/linked-data/cube#Observation",
+              "curie": "qb:Observation"
+            }
+          ],
+          "links": [
+            {
+              "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/age",
+              "curie": "prop:age",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'http://data.mgmdsp.org.uk/def/volunteers/age-group/'+value.urlify()",
+                "isRowNumberCell": false,
+                "columnName": "Age",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "lang": "en",
+                      "columnName": "Age"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/period",
+              "curie": "prop:period",
+              "target": {
+                "nodeType": "cell-as-resource",
+                "expression": "'http://reference.data.gov.uk/id/government-half/'+value",
+                "isRowNumberCell": false,
+                "columnName": "Period",
+                "rdfTypes": [],
+                "links": [
+                  {
+                    "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+                    "curie": "rdfs:label",
+                    "target": {
+                      "nodeType": "cell-as-literal",
+                      "expression": "value",
+                      "isRowNumberCell": false,
+                      "lang": "en",
+                      "columnName": "Period"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "uri": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age/prop/count",
+              "curie": "prop:count",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "value",
+                "isRowNumberCell": false,
+                "valueType": "http://www.w3.org/2001/XMLSchema#int",
+                "columnName": "Count"
+              }
+            },
+            {
+              "uri": "http://purl.org/linked-data/cube#dataSet",
+              "curie": "qb:dataSet",
+              "target": {
+                "nodeType": "resource",
+                "value": "http://data.gmdsp.org.uk/data/manchester/volunteers/stats/age",
+                "rdfTypes": [],
+                "links": []
+              }
+            },
+            {
+              "uri": "http://www.w3.org/2000/01/rdf-schema#label",
+              "curie": "rdfs:label",
+              "target": {
+                "nodeType": "cell-as-literal",
+                "expression": "'Count of people from '+ cells[\"Age\"].value + \" age group registered as volunteers during period \" + cells[\"Period\"].value",
+                "isRowNumberCell": true,
+                "lang": "en"
+              }
+            }
+          ]
+        },
+        {
+          "nodeType": "blank",
+          "rdfTypes": [],
+          "links": []
+        }
+      ]
+    }
+  }
+]
